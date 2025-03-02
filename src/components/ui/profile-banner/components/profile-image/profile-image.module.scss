@@ -1,0 +1,11 @@
+@use '@/utils/breakpoints.module.scss' as *;
+
+.profileImage {
+	transform: scale(-1, 1);
+	border-radius: 30%;
+
+	@include breakpoints('md') {
+		width: 70dvw;
+		height: 100%;
+	}
+}
