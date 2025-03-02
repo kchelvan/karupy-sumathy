@@ -1,4 +1,4 @@
-@import '@/utils/breakpoints.module.scss';
+@use '@/utils/breakpoints.module.scss' as *;
 
 .navigationLinks {
 	display: flex;

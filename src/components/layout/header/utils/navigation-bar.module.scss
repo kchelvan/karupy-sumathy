@@ -1,4 +1,4 @@
-@import '@/utils/colors.module.scss';
+@use '@/utils/colors.module.scss' as *;
 
 .container {
 	display: flex;

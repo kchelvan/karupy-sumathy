@@ -1,4 +1,4 @@
-@import '@/utils/colors.module.scss';
+@use '@/utils/colors.module.scss' as *;
 
 .navigationLink {
 	transition: all 0.3s ease;
