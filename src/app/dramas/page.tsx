@@ -1,9 +1,9 @@
 import ProjectList from '@/components/complex/project-list';
-import { useFetchFilm, UseFetchFilmResponse } from '@/hooks/use-fetch-film';
+import { fetchFilms, UseFetchFilmResponse } from '@/utils/helpers';
 import React from 'react';
 
 const DramaListPage = async () => {
-	const { films }: UseFetchFilmResponse = await useFetchFilm({
+	const { films }: UseFetchFilmResponse = await fetchFilms({
 		route: 'drama',
 	});
 
