@@ -4,7 +4,7 @@ import React from 'react';
 
 const FeatureFilmListPage = async () => {
 	const { films }: UseFetchFilmResponse = await fetchFilms({
-		route: 'feature-film',
+		tableName: 'featureFilm',
 	});
 
 	return <ProjectList title='Feature Films' projects={films} />;
