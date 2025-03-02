@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
 	devIndicators: false,
 	env: {
 		BASE_URL: process.env.BASE_URL,
+		BASE_ENV: process.env.BASE_ENV,
 	},
 };
 
