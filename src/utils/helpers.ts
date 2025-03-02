@@ -5,15 +5,18 @@ export interface UseFetchFilmResponse {
 }
 
 export const fetchFilms = async ({ route }: { route: string }) => {
-	const res = await fetch(`${process.env.API_URL}${route}`);
+	const respData = await fetch(`${process.env.API_URL}${route}`)
+		.then((res) => {
+			// eslint-disable-next-line no-console
+			console.log('debug: res', res);
+			return res.json();
+		})
+		.catch((err) => {
+			// eslint-disable-next-line no-console
+			console.log('err', err);
+			throw err;
+		});
 	// eslint-disable-next-line no-console
-	console.log('debug error: res', res, `${process.env.API_URL}${route}`);
-	const respData = await res.json();
-	// eslint-disable-next-line no-console
-	console.log(
-		'debug error: respData',
-		respData,
-		`${process.env.API_URL}${route}`
-	);
+	console.log('debug error: res', respData, `${process.env.API_URL}${route}`);
 	return { films: respData?.data || [] };
 };
