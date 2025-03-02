@@ -1,0 +1,10 @@
+@use '@/utils/colors.module.scss' as *;
+@use '@/utils/breakpoints.module.scss' as *;
+
+.container {
+	min-height: calc(100dvh - 169px);
+
+	@include breakpoints('md') {
+		min-height: calc(100dvh - 128px);
+	}
+}
