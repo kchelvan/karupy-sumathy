@@ -6,7 +6,7 @@ export interface UseFetchFilmResponse {
 }
 
 export const fetchFilms = async ({ tableName }: { tableName: string }) => {
-	// eslint-disable-next-line no-explicit-any
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const prismaClient = prisma as any;
 	const response = await prismaClient[tableName].findMany({});
 	return { films: response || [] };
