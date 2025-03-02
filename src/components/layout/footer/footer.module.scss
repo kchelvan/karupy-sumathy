@@ -1,0 +1,22 @@
+@import '@/utils/colors.module.scss';
+@import '@/utils/breakpoints.module.scss';
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: $black;
+	padding: 24px 40px;
+
+	@include breakpoints('md') {
+		padding: 16px 24px;
+		height: 20px;
+	}
+}
+
+.copyrightText {
+	color: $white;
+	font-size: 14px;
+	font-weight: 700;
+	margin: 0;
+}

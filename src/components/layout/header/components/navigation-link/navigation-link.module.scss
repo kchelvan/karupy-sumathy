@@ -1,0 +1,16 @@
+@import '@/utils/colors.module.scss';
+
+.navigationLink {
+	transition: all 0.3s ease;
+	text-transform: capitalize;
+	color: $white;
+	list-style-type: none;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 15px;
+
+	&:hover {
+		text-shadow: 0.2px 0px 0px $white, -0.2px 0px 0px $white;
+		text-decoration: underline;
+	}
+}

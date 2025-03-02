@@ -1,0 +1,9 @@
+@import '@/utils/colors.module.scss';
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: $black;
+	width: 100%;
+}

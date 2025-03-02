@@ -1,0 +1,11 @@
+@import '@/utils/breakpoints.module.scss';
+
+.navigationLinks {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	margin: 16px;
+	margin-right: 32px;
+	transition: all 0.3s ease;
+}
