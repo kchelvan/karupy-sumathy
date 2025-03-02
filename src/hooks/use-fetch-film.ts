@@ -1,8 +1,12 @@
-const useFetchFilm = async ({ route }: { route: string }) => {
-	const filmResp = await fetch(`${process.env.BASE_URL}/api/${route}`);
-	const films = await filmResp.json();
+import { FilmType } from '@/utils/types';
 
-	return { films };
+export interface UseFetchFilmResponse {
+	films: FilmType[];
+}
+
+export const useFetchFilm = async ({ route }: { route: string }) => {
+	const res = await fetch(`${process.env.BASE_URL}/api/${route}`);
+	const { data } = await res.json();
+
+	return { films: data };
 };
-
-export default useFetchFilm;

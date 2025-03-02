@@ -1,17 +1,13 @@
-import useFetchFilm from '@/hooks/use-fetch-film';
-import { FilmType } from '@/utils/types';
+import ProjectList from '@/components/complex/project-list';
+import { useFetchFilm, UseFetchFilmResponse } from '@/hooks/use-fetch-film';
 import React from 'react';
 
 const FeatureFilmListPage = async () => {
-	const { films } = await useFetchFilm({ route: 'feature-film' });
+	const { films }: UseFetchFilmResponse = await useFetchFilm({
+		route: 'feature-film',
+	});
 
-	return (
-		<div>
-			{films?.data?.map((film: FilmType) => (
-				<div key={film?.id}>{film?.title}</div>
-			))}
-		</div>
-	);
+	return <ProjectList title='Feature Films' projects={films} />;
 };
 
 export default FeatureFilmListPage;
