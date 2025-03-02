@@ -5,8 +5,13 @@ export interface UseFetchFilmResponse {
 }
 
 export const fetchFilms = async ({ route }: { route: string }) => {
-	const res = await fetch(`https://${process.env.BASE_URL}/api/${route}`);
-	const { data } = await res.json();
+	try {
+		const res = await fetch(`${process.env.API_URL}${route}`);
+		const respData = await res.json();
 
-	return { films: data };
+		return { films: respData?.data || [] };
+	} catch (error) {
+		console.error(error);
+		return { films: [], error: error };
+	}
 };
