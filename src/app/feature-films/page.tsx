@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FeatureFilmListPage = () => {
+const FeatureFilmListPage = async () => {
 	return <div>FeatureFilmListPage</div>;
 };
 

@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model FeatureFilm {
+  id                    String        @default(cuid())      @id
+  createdAt             DateTime      @default(now())       @map(name: "created_at")
+  updatedAt             DateTime      @updatedAt            @map(name: "updated_at")
+  title                 String  
+  link                  String?  
+  videoURL              String?  
+  startTime             Int?  
+  description           String?  
+}          
+          
+model ShortFilm         {  
+  id                    String        @default(cuid())      @id
+  createdAt             DateTime      @default(now())       @map(name: "created_at")
+  updatedAt             DateTime      @updatedAt            @map(name: "updated_at")
+  title                 String  
+  link                  String?  
+  videoURL              String?  
+  startTime             Int?  
+  description           String?  
+}          
+          
+model Drama {          
+  id                    String        @default(cuid())      @id
+  createdAt             DateTime      @default(now())       @map(name: "created_at")
+  updatedAt             DateTime      @updatedAt            @map(name: "updated_at")
+  title                 String
+  link                  String?
+  videoURL              String?
+  startTime             Int?
+  description           String?
+}        
+
+model Poem {
+  id                    String        @default(cuid())      @id
+  createdAt             DateTime      @default(now())       @map(name: "created_at")
+  updatedAt             DateTime      @updatedAt            @map(name: "updated_at")
+  title                 String
+  image                 String?
+  shortDescription      String?
+  content               String?
+}
+
+model ShortStory {
+  id                    String        @default(cuid())      @id
+  createdAt             DateTime      @default(now())       @map(name: "created_at")
+  updatedAt             DateTime      @updatedAt            @map(name: "updated_at")
+  title                 String
+  image                 String?
+  shortDescription      String?
+  content               String?
+}
