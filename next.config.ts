@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
 	/* config options here */
 	devIndicators: false,
 	env: {
-		VERCEL_URL: process.env.VERCEL_URL,
+		BASE_URL: process.env.BASE_URL,
 	},
 };
 
