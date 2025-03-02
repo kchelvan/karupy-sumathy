@@ -1,6 +1,29 @@
 @use '@/utils/colors.module.scss' as *;
 @use '@/utils/breakpoints.module.scss' as *;
 
+.homeButtonTextWrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.homeButtonIcon {
+	padding-right: 8px;
+	width: 24px;
+	height: 24px;
+
+	display: none;
+
+	@include breakpoints('md') {
+		padding-right: 12px;
+		width: 24px;
+		height: 24px;
+
+		display: flex;
+	}
+}
+
 .homeButton {
 	display: flex;
 	flex-direction: column;
@@ -9,12 +32,12 @@
 	color: $white;
 	font-size: 14px;
 	margin: 0px 16px;
-	padding: 24px 8px 24px 24px;
+	padding: 24px 8px 24px 16px;
 	text-decoration: none;
 
 	@include breakpoints('md') {
 		margin: 0px;
-		padding: 16px 24px;
+		padding: 16px 16px;
 		max-height: 60px;
 	}
 }

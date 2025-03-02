@@ -7,10 +7,6 @@
 	justify-content: center;
 	background-color: $black;
 	padding: 60px 0px 120px;
-
-	@include breakpoints('md') {
-		padding: 60px 0px 120px;
-	}
 }
 
 .profileContainer {
