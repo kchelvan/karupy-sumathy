@@ -1,0 +1,27 @@
+@use '@/utils/colors.module.scss' as *;
+@use '@/utils/breakpoints.module.scss' as *;
+
+.container {
+	color: $white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 24px;
+	pointer-events: none;
+	min-height: calc(100vh - 102px);
+}
+
+.bannerVideo {
+	position: absolute;
+	width: 100%;
+	height: calc(100% - 36px);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	z-index: -1;
+	position: absolute;
+	top: 36px;
+	left: 0;
+	margin-bottom: -24px;
+}

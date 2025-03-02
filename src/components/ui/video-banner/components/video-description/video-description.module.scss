@@ -1,0 +1,34 @@
+@use '@/utils/colors.module.scss' as *;
+@use '@/utils/breakpoints.module.scss' as *;
+
+.descriptionContainer {
+	position: relative;
+	bottom: 7%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 32px;
+}
+
+.videoText {
+	color: $white;
+	font-size: 56px;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	text-shadow: 3px 3px 16px $blackShadow;
+
+	@include breakpoints('md') {
+		font-size: 42px;
+	}
+}
+
+.chevronContainer {
+	text-shadow: 3px 3px 16px $blackShadow;
+	margin-top: 16px;
+}
