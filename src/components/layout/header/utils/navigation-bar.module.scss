@@ -1,4 +1,5 @@
 @use '@/utils/colors.module.scss' as *;
+@use '@/utils/breakpoints.module.scss' as *;
 
 .container {
 	display: flex;
@@ -6,4 +7,20 @@
 	justify-content: space-between;
 	background-color: $black;
 	width: 100%;
+}
+
+.navigationList {
+	display: flex;
+
+	@include breakpoints('lg') {
+		display: none;
+	}
+}
+
+.hamburgerMenu {
+	display: none;
+
+	@include breakpoints('lg') {
+		display: flex;
+	}
 }
