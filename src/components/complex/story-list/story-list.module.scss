@@ -115,6 +115,7 @@
 .coverImage {
 	display: flex;
 	width: auto;
+	max-width: 21dvw;
 	height: 300px;
 	-webkit-animation: slide-fwd-left 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94)
 		both;
@@ -123,6 +124,7 @@
 
 	@include breakpoints('md') {
 		width: 100%;
+		max-width: 100%;
 
 		-webkit-animation: none;
 		animation: none;

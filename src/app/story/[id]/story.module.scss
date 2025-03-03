@@ -1,0 +1,65 @@
+@use '@/utils/colors.module.scss' as *;
+@use '@/utils/breakpoints.module.scss' as *;
+@use '@/utils/animations.module.scss' as *;
+
+.wrapper {
+	margin: 0px 128px;
+	padding-bottom: 128px;
+
+	@include breakpoints('md') {
+		margin: 0px 32px;
+		padding-bottom: 32px;
+	}
+}
+
+.container {
+	background-color: $black;
+	min-height: calc(100dvh - 169px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	@include breakpoints('md') {
+		min-height: calc(100dvh - 128px);
+	}
+}
+
+.contentWrapper {
+	width: 60%;
+	padding-bottom: 24px;
+
+	@include breakpoints('md') {
+		width: 80%;
+		padding-top: 16px;
+		padding-bottom: 32px;
+	}
+}
+
+.storyTitle {
+	color: $white;
+	font-size: 48px;
+	font-weight: 700;
+	margin: 0;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	text-align: center;
+
+	@include breakpoints('md') {
+		font-size: 36px;
+	}
+}
+
+.storyText {
+	color: $white;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 32px;
+	margin: 0;
+	white-space: pre-line;
+
+	@include breakpoints('md') {
+		font-size: 18px;
+		line-height: 26px;
+	}
+}

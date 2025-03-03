@@ -2,14 +2,15 @@ import React from 'react';
 import styles from './story-list.module.scss';
 import Image from 'next/image';
 import { PostType } from '@/utils/types';
+import { addLineBreaks } from '@/utils/helpers';
 
 type StoryListProps = {
 	title: string;
 	projects: PostType[];
+	type?: string;
 };
 
-const StoryList = ({ title, projects }: StoryListProps) => {
-	console.log('debug: projects', projects);
+const StoryList = ({ title, projects, type }: StoryListProps) => {
 	return (
 		<div className={styles.wrapper}>
 			<p className={styles.sectionText}>{title}</p>
@@ -29,8 +30,10 @@ const StoryList = ({ title, projects }: StoryListProps) => {
 									<div className={styles.infoContainer}>
 										<p className={styles.headerText}>{title}</p>
 										<div className={styles.descriptionContainer}>
-											<p className={styles.headerSubText}>{shortDescription}</p>
-											<a href={'/'}>
+											<p className={styles.headerSubText}>
+												{addLineBreaks(shortDescription || '')}
+											</p>
+											<a href={`${type}/${id}`}>
 												<p className={styles.viewMoreButton}> Read More</p>
 											</a>
 										</div>
