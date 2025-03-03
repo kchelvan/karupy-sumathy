@@ -1,0 +1,101 @@
+@use '@/utils/colors.module.scss' as *;
+@use '@/utils/animations.module.scss' as *;
+
+.noScroll {
+	overflow: hidden;
+}
+
+body:has(.backdrop) {
+	overflow: hidden;
+}
+
+.container {
+	display: flex;
+}
+
+.iconContainer {
+	position: relative;
+	display: block;
+	margin: 20px;
+	z-index: 10;
+}
+
+.iconLineA {
+	display: block;
+	width: 20px;
+	height: 2px;
+	background-color: $white;
+	border-radius: 2px;
+	margin-bottom: 4px;
+}
+
+.iconLineB {
+	display: block;
+	width: 20px;
+	height: 2px;
+	background-color: $white;
+	border-radius: 2px;
+	margin-bottom: 4px;
+}
+
+.iconLineC {
+	display: block;
+	width: 20px;
+	height: 2px;
+	background-color: $white;
+	border-radius: 2px;
+	margin-bottom: 4px;
+}
+
+.navigationSlider {
+	position: fixed;
+	background-color: $secondaryColor;
+	top: 0;
+	right: 0;
+	width: 212px;
+	height: 100dvh;
+	box-shadow: 3px 3px 16px $blackShadow;
+	padding: 64px 24px;
+	z-index: 5;
+	-webkit-animation: slide-nav-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+		both;
+	animation: slide-nav-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+	overflow: hidden;
+}
+
+.navigationHiddenSlider {
+	position: fixed;
+	background-color: $secondaryColor;
+	top: 0;
+	right: 100dvw;
+	width: 212px;
+	height: 100dvh;
+	padding: 64px 24px;
+	z-index: 5;
+	-webkit-animation: slide-nav-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+		both;
+	animation: slide-nav-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+	overflow: hidden;
+}
+
+.link {
+	display: flex;
+	flex-direction: column;
+	z-index: 10px;
+	color: $white;
+	text-decoration: none;
+	margin-bottom: 24px;
+	text-align: right;
+	overflow: hidden;
+}
+
+.backdrop {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100dvw;
+	height: 100dvh;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	overflow: hidden;
+}
