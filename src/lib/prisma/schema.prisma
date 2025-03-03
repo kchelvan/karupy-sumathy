@@ -60,3 +60,13 @@ model ShortStory {
   shortDescription      String?
   content               String?
 }
+
+model VideoBanner {
+  id                    String        @default(cuid())      @id
+  createdAt             DateTime      @default(now())       @map(name: "created_at")
+  updatedAt             DateTime      @updatedAt            @map(name: "updated_at")
+  active                Boolean       @default(true)
+  title                 String
+  videoID               String?
+  fullVideoID           String?
+}

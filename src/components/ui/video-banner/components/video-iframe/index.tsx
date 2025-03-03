@@ -1,12 +1,20 @@
 import React from 'react';
 import styles from './video-iframe.module.scss';
+import { fetchAllTable } from '@/utils/helpers';
+import { UseFetchVideoBannerResponse } from '@/utils/types';
 
-const VideoIframe = () => {
+const VideoIframe = async () => {
+	const { tableData }: UseFetchVideoBannerResponse = await fetchAllTable({
+		tableName: 'videoBanner',
+	});
+
+	const videoData = tableData?.[0];
+
 	return (
 		<iframe
 			className={styles.iframe}
-			src='https://www.youtube-nocookie.com/embed/d9MxCQM9IX4?si=O2SjY0XAFQSkDzmi&amp;autoplay=1&mute=1&controls=false&loop=1&playlist=d9MxCQM9IX4&rel=0'
-			title='YouTube video player'
+			src={`https://www.youtube-nocookie.com/embed/${videoData?.videoID}?si=O2SjY0XAFQSkDzmi&amp;autoplay=1&mute=1&controls=false&loop=1&playlist=${videoData?.videoID}&rel=0`}
+			title={videoData?.title || ''}
 			allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
 		/>
 	);

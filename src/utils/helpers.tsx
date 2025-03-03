@@ -1,18 +1,6 @@
-import { FilmType, PostType } from '@/utils/types';
 import prisma from '@/lib/prisma/client';
 import { Fragment } from 'react';
 
-export interface UseFetchFilmResponse {
-	tableData: FilmType[];
-}
-
-export interface UseFetchPostResponse {
-	tableData: PostType[];
-}
-
-export interface UseFetchByIdPostResponse {
-	tableData: PostType;
-}
 export const fetchAllTable = async ({ tableName }: { tableName: string }) => {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const prismaClient = prisma as any;

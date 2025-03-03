@@ -1,5 +1,6 @@
 import ProjectList from '@/components/complex/project-list';
-import { fetchAllTable, UseFetchFilmResponse } from '@/utils/helpers';
+import { fetchAllTable } from '@/utils/helpers';
+import { UseFetchFilmResponse } from '@/utils/types';
 import React from 'react';
 
 const FeatureFilmListPage = async () => {
