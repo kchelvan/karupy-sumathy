@@ -1,5 +1,6 @@
 import StoryList from '@/components/complex/story-list';
-import { fetchAllTable, UseFetchPostResponse } from '@/utils/helpers';
+import { fetchAllTable } from '@/utils/helpers';
+import { UseFetchPostResponse } from '@/utils/types';
 import React from 'react';
 
 const PoemListPage = async () => {

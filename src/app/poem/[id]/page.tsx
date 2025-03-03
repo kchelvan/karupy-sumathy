@@ -1,9 +1,6 @@
-import {
-	addLineBreaks,
-	fetchById,
-	UseFetchByIdPostResponse,
-} from '@/utils/helpers';
+import { addLineBreaks, fetchById } from '@/utils/helpers';
 import styles from './poem.module.scss';
+import { UseFetchByIdPostResponse } from '@/utils/types';
 
 export default async function PoemPage({
 	params,

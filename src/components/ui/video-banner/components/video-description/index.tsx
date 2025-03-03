@@ -1,10 +1,22 @@
 import Image from 'next/image';
 import React from 'react';
 import styles from './video-description.module.scss';
+import Link from 'next/link';
+import { UseFetchVideoBannerResponse } from '@/utils/types';
+import { fetchAllTable } from '@/utils/helpers';
 
-const VideoDescription = () => {
+const VideoDescription = async () => {
+	const { tableData }: UseFetchVideoBannerResponse = await fetchAllTable({
+		tableName: 'videoBanner',
+	});
+
+	const videoURL = tableData?.[0]?.fullVideoID;
+
 	return (
-		<div className={styles.descriptionContainer}>
+		<Link
+			className={styles.descriptionContainer}
+			href={videoURL ? `https://www.youtube.com/watch?v=${videoURL}` : '/'}
+		>
 			<p className={styles.videoText}>Niyoga</p>
 			<div className={styles.chevronContainer}>
 				<Image
@@ -14,7 +26,7 @@ const VideoDescription = () => {
 					height={24}
 				/>
 			</div>
-		</div>
+		</Link>
 	);
 };
 

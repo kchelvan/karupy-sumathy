@@ -1,6 +1,10 @@
 @use '@/utils/colors.module.scss' as *;
 @use '@/utils/breakpoints.module.scss' as *;
 
+.wrapper {
+	background-color: $black;
+}
+
 .container {
 	min-height: calc(100dvh - 169px);
 

@@ -1,9 +1,6 @@
-import {
-	addLineBreaks,
-	fetchById,
-	UseFetchByIdPostResponse,
-} from '@/utils/helpers';
+import { addLineBreaks, fetchById } from '@/utils/helpers';
 import styles from './story.module.scss';
+import { UseFetchByIdPostResponse } from '@/utils/types';
 
 export default async function StoryPage({
 	params,

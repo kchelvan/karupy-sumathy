@@ -6,10 +6,13 @@
 	bottom: 7%;
 	width: 100%;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	padding-bottom: 32px;
+	margin-left: 16px;
+	text-decoration: none;
+	pointer-events: all;
 }
 
 .videoText {
@@ -24,11 +27,12 @@
 	text-shadow: 3px 3px 16px $blackShadow;
 
 	@include breakpoints('md') {
-		font-size: 42px;
+		font-size: 36px;
 	}
 }
 
 .chevronContainer {
 	text-shadow: 3px 3px 16px $blackShadow;
-	margin-top: 16px;
+	margin-left: 16px;
+	rotate: 270deg;
 }

@@ -2,15 +2,18 @@
 @use '@/utils/breakpoints.module.scss' as *;
 
 .container {
+	position: relative;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	background-color: $black;
 	width: 100%;
+	z-index: 10;
 }
 
 .navigationList {
 	display: flex;
+	z-index: 10;
 
 	@include breakpoints('lg') {
 		display: none;
@@ -19,6 +22,7 @@
 
 .hamburgerMenu {
 	display: none;
+	z-index: 10;
 
 	@include breakpoints('lg') {
 		display: flex;

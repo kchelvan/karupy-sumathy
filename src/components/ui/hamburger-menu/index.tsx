@@ -23,7 +23,12 @@ const HamburgerMenu = () => {
 			>
 				{NAVIGATION_LINKS.map((link) => {
 					return (
-						<Link key={link.label} className={styles.link} href={link.link}>
+						<Link
+							key={link.label}
+							className={styles.link}
+							href={link.link}
+							onClick={() => setIsOpen(false)}
+						>
 							{link?.label}
 						</Link>
 					);
