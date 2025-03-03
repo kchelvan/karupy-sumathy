@@ -4,7 +4,6 @@ import {
 	UseFetchByIdPostResponse,
 } from '@/utils/helpers';
 import styles from './poem.module.scss';
-import { Fragment } from 'react';
 
 export default async function PoemPage({
 	params,
