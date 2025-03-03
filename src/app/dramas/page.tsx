@@ -1,13 +1,13 @@
 import ProjectList from '@/components/complex/project-list';
-import { fetchFilms, UseFetchFilmResponse } from '@/utils/helpers';
+import { fetchAllTable, UseFetchFilmResponse } from '@/utils/helpers';
 import React from 'react';
 
 const DramaListPage = async () => {
-	const { films }: UseFetchFilmResponse = await fetchFilms({
+	const { tableData }: UseFetchFilmResponse = await fetchAllTable({
 		tableName: 'drama',
 	});
 
-	return <ProjectList title='Short Films' projects={films} />;
+	return <ProjectList title='Dramas' projects={tableData} />;
 };
 
 export default DramaListPage;

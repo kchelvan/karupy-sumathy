@@ -1,0 +1,130 @@
+@use '@/utils/colors.module.scss' as *;
+@use '@/utils/breakpoints.module.scss' as *;
+@use '@/utils/animations.module.scss' as *;
+
+.wrapper {
+	margin: 0px 128px;
+	padding-bottom: 128px;
+
+	@include breakpoints('md') {
+		margin: 0px 32px;
+		padding-bottom: 32px;
+	}
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 64px;
+
+	@include breakpoints('md') {
+		flex-direction: column !important;
+	}
+}
+
+.projectWrapper {
+	max-width: 21dvw;
+	border: 1px solid $grey;
+	border-radius: 25px;
+	padding: 24px 24px 48px 24px;
+
+	@include breakpoints('md') {
+		max-width: 100%;
+	}
+}
+
+.projectContainer {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	gap: 24px;
+
+	&:nth-of-type(2) {
+		flex-direction: row-reverse;
+	}
+
+	@include breakpoints('md') {
+		flex-direction: column !important;
+	}
+}
+
+.descriptionContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 95%;
+
+	@include breakpoints('md') {
+		height: auto;
+	}
+}
+
+.sectionText {
+	color: $primaryColor;
+	font-size: 36px;
+}
+
+.headerText {
+	color: $primaryColor;
+	font-size: 24px;
+	font-weight: 700;
+	padding: 0;
+	margin: 0;
+}
+
+.headerSubText {
+	color: $grey;
+	font-size: 16px;
+	padding: 32px 0 0 0;
+	margin: 0;
+	white-space: pre-line;
+}
+
+.infoContainer {
+	padding-top: 16px;
+	width: 100%;
+	-webkit-animation: slide-fwd-left 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+		both;
+	animation: slide-fwd-left 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+	@include breakpoints('md') {
+		width: 100%;
+
+		-webkit-animation: none;
+		animation: none;
+	}
+}
+
+.viewMoreButton {
+	color: $primaryColor;
+	font-size: 16px;
+	margin: 0;
+	padding-top: 16px;
+	text-align: left;
+	text-decoration: underline;
+	font-weight: 700;
+	z-index: 100;
+
+	@include breakpoints('md') {
+		padding-top: 16px;
+	}
+}
+
+.coverImage {
+	display: flex;
+	width: auto;
+	height: 300px;
+	-webkit-animation: slide-fwd-left 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+		both;
+	animation: slide-fwd-left 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+	border-radius: 8%;
+
+	@include breakpoints('md') {
+		width: 100%;
+
+		-webkit-animation: none;
+		animation: none;
+	}
+}

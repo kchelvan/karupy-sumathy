@@ -8,3 +8,13 @@ export interface FilmType {
 	startTime?: number;
 	description?: string;
 }
+
+export interface PostType {
+	id: string;
+	createdAt: string;
+	updatedAt: string;
+	title: string;
+	image: string;
+	shortDescription?: string;
+	content: string;
+}
