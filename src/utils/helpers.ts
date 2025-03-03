@@ -1,13 +1,17 @@
-import { FilmType } from '@/utils/types';
+import { FilmType, PostType } from '@/utils/types';
 import prisma from '@/lib/prisma/client';
 
 export interface UseFetchFilmResponse {
-	films: FilmType[];
+	tableData: FilmType[];
 }
 
-export const fetchFilms = async ({ tableName }: { tableName: string }) => {
+export interface UseFetchPostResponse {
+	tableData: PostType[];
+}
+
+export const fetchAllTable = async ({ tableName }: { tableName: string }) => {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const prismaClient = prisma as any;
 	const response = await prismaClient[tableName].findMany({});
-	return { films: response || [] };
+	return { tableData: response || [] };
 };
