@@ -7,7 +7,7 @@ const ShortStoryListPage = async () => {
 		tableName: 'shortStory',
 	});
 
-	return <StoryList title='Short Stories' projects={tableData} />;
+	return <StoryList title='Short Stories' projects={tableData} type='story' />;
 };
 
 export default ShortStoryListPage;
